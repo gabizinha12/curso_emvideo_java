@@ -156,7 +156,7 @@ public class Calculadora extends javax.swing.JFrame {
         lblRestoDivPor2.setText(Integer.toString(restoPor2));
         lblRaizCubica.setText(Double.toString(raizCubica));
         lblElevadoAoCubo.setText(Double.toString(elevadoAoCubo));
-        lblRaizQuadrada.setText(Double.toString(raizQuadrada));
+        lblRaizQuadrada.setText(String.format("%.2f",raizQuadrada));
         lblValorAbsoluto.setText(Integer.toString(valorAbs));
         
         

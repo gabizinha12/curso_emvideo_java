@@ -75,13 +75,12 @@ public class LeitorDePensamentoTela extends javax.swing.JFrame {
 
     private void btnPalpiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPalpiteActionPerformed
         // TODO add your handling code here:
-        Random aleatorio = new Random();
-        int num = aleatorio.nextInt(5);
-        String numeroGenio = Integer.toString(aleatorio.nextInt(5));
+        double num = 1 + Math.random() * (6 -1); // parte não inteira do numero gerado
+        int valor = (int) num;
         int palpite = Integer.parseInt(txtNum.getValue().toString());
         String f1 = "<html>Acertou!<center></center></html>";
-        String f2 = "<html><center>Errou, pensei no " + num + "</center></html>";
-        String res = (palpite == num) ? f1 : f2;
+        String f2 = "<html><center>Errou, pensei no " + valor + "</center></html>";
+        String res = (palpite == valor) ? f1 : f2;
         txtGenio.setFont(new Font("Arial Black", Font.PLAIN, 16));
         txtGenio.setText(res);
 
